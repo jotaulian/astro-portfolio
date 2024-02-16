@@ -1,0 +1,21 @@
+---
+// Importa la imagen
+import { Image } from "astro:assets";
+import myImage from "../assets/logo-face.webp"; // La imagen es 1600x900
+---
+
+<header class="flex justify-between py-3 max-w-[1120px] mx-auto">
+  <Image
+    class="w-16 h-16 p-1 rounded-full object-cover bg-indigo-800 items-center hover:scale-110 hover:rotate-12 ease-in-out duration-300"
+    src={myImage}
+    alt="portfolio logo"
+  />
+  <nav class="flex flex-row gap-x-10 font-black text-lg items-center">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+<style></style>
