@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/nunito-sans";
+import BlurBlobs from "../components/BlurBlobs.astro";
 import Header from "../components/Header.astro";
 interface Props {
   title: string;
@@ -18,7 +19,16 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="p-3">
+  <body class="px-3 pb-8 space-y-6 md:space-y-8">
+    <div class="fixed left-0 top-0 -z-10 h-full w-full">
+      <div
+        class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+      >
+        <div class="max-w-[1120px] h-full mx-auto relative">
+          <BlurBlobs />
+        </div>
+      </div>
+    </div>
     <Header />
     <slot />
   </body>
@@ -32,11 +42,12 @@ const { title } = Astro.props;
   }
 
   body {
-    background: linear-gradient(
+    /* background: linear-gradient(
       176deg,
       rgb(255, 255, 255) 50%,
       rgb(224, 224, 234) 100%
-    );
+    ); */
+    background-color: rgb(228, 228, 228);
     min-height: 100vh;
     background-attachment: fixed;
     color: rgb(30 27 75);

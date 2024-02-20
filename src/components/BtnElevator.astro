@@ -1,0 +1,19 @@
+---
+const { href, title, titleHover, color } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={`relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border border-${color} rounded-full group mt-4 text-${color}`}
+>
+  <span
+    class={`absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-y-full bg-${color} rounded-full group-hover:translate-y-0 ease`}
+  >
+    {titleHover}
+  </span>
+  <span
+    class={`absolute uppercase flex items-center justify-center w-full h-full text-${color} transition-all duration-300 transform group-hover:translate-y-full ease`}
+    >{title}</span
+  >
+  <span class="relative invisible">{title}</span>
+</a>
