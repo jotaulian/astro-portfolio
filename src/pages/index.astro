@@ -7,42 +7,68 @@ import profilePic from "../assets/lele.webp";
 ---
 
 <Layout title="Julian's portfolio">
-  <main class="space-y-8">
+  <main class="space-y-6">
     <!-- Main header -->
     <section
       class="max-w-[1120px] mx-auto rounded-[24px] p-4 sm:p-12 bg-white border border-gray-300 shadow sm:grid sm:gap-4 sm:grid-cols-3"
     >
       <div class="mb-8 sm:col-span-2">
-        <h1 class="font-bold text-7xl px-0 pb-4 relative">I'm Julian Eggle.</h1>
+        <h1 class="font-bold text-6xl sm:text-7xl px-0 pb-4 relative">
+          I'm Julian Eggle.
+        </h1>
         <h2 class="text-xl relative max-w-[700px] mx-auto">
           A software developer with strong focus on the user experience, who
           loves cracking problems and creating innovative solutions with
           Javascript.
         </h2>
-        <BtnElevator
-          title="Contact me"
-          titleHover="Send email"
-          href="#"
-          color="indigo-950"
+        <div class="flex flex-row gap-x-4">
+          <BtnElevator
+            title="LinkedIn"
+            titleHover="Check me out"
+            href="#"
+            tono="indigo-950"
+          />
+          <BtnElevator
+            title="Contact me"
+            titleHover="Send email"
+            href="#"
+            tono="indigo-950"
+          />
+        </div>
+      </div>
+      <div class="w-full aspect-square rounded-[24px] overflow-hidden">
+        <Image
+          class="w-full aspect-square hover:scale-105 transition duration-500"
+          src={profilePic}
+          alt="profile picture"
+          loading="eager"
         />
       </div>
-      <Image
-        class="w-full aspect-square rounded-[24px]"
-        src={profilePic}
-        alt="profile picture"
-        loading="eager"
-      />
     </section>
 
     <!-- Experience -->
-    <section
-      class="w-full max-w-[1120px] h-80 mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-gray-400 transition"
-    >
-      <div class="max-w-[1120px]">
-        <h3 class="text-3xl font-bold">Professional experience</h3>
-        <hr class="w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded" />
-      </div>
-    </section>
+    <div class="max-w-[1120px] mx-auto grid gap-6 sm:grid-cols-2">
+      <section
+        class="w-full h-80 bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-indigo-300 transition"
+      >
+        <div class="max-w-[1120px]">
+          <h3 class="text-3xl font-bold">Professional experience</h3>
+          <hr
+            class="hover:bg-amber-500 w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded"
+          />
+
+          <BtnElevator title="Download CV" titleHover="And share it" href="#" />
+        </div>
+      </section>
+      <section
+        class="w-full max-w-[1120px] h-80 mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-indigo-300 transition"
+      >
+        <div class="max-w-[1120px]">
+          <h3 class="text-3xl font-bold">Technologies</h3>
+          <hr class="w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded" />
+        </div>
+      </section>
+    </div>
 
     <!-- Projects -->
 
