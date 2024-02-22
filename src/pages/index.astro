@@ -3,11 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ContactBanner from "../components/ContactBanner.astro";
 import BtnElevator from "../components/BtnElevator.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
 import profilePic from "../assets/lele.webp";
+import GithubIcon from "../icons/Github.astro";
+import DownloadIcon from "../icons/Download.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import SendEmailIcon from "../icons/SendEmail.astro";
+import VueIcon from "../icons/Vue.astro";
 ---
 
 <Layout title="Julian's portfolio">
-  <main class="space-y-6">
+  <main class="space-y-3 md:space-y-6">
     <!-- Main header -->
     <section
       class="max-w-[1120px] mx-auto rounded-[24px] p-4 sm:p-12 bg-white border border-gray-300 shadow sm:grid sm:gap-4 sm:grid-cols-3"
@@ -21,51 +28,96 @@ import profilePic from "../assets/lele.webp";
           loves cracking problems and creating innovative solutions with
           Javascript.
         </h2>
-        <div class="flex flex-row gap-x-4">
+        <div class="flex flex-wrap gap-x-4">
           <BtnElevator
             title="LinkedIn"
-            titleHover="Check me out"
-            href="#"
+            titleHover="Let's connect"
+            href="https://www.linkedin.com/in/julian-eggle/"
             tono="indigo-950"
-          />
+          >
+            <LinkedInIcon class="size-7" />
+          </BtnElevator>
           <BtnElevator
-            title="Contact me"
-            titleHover="Send email"
-            href="#"
+            title="Github"
+            titleHover="The hustle"
+            href="https://github.com/jotaulian"
             tono="indigo-950"
-          />
+          >
+            <GithubIcon class="size-6" />
+          </BtnElevator>
+
+          <BtnElevator
+            title="julianeggle@hotmail.com"
+            titleHover="Send me an email"
+            href="mailto:julianeggle@hotmail.com"
+            tono="indigo-950"
+          >
+            <SendEmailIcon class="size-6" />
+          </BtnElevator>
         </div>
       </div>
       <div class="w-full aspect-square rounded-[24px] overflow-hidden">
         <Image
-          class="w-full aspect-square hover:scale-105 transition duration-500"
+          class="w-full aspect-square hover:scale-110 transition duration-500"
           src={profilePic}
           alt="profile picture"
-          loading="eager"
         />
       </div>
     </section>
 
-    <!-- Experience -->
-    <div class="max-w-[1120px] mx-auto grid gap-6 sm:grid-cols-2">
+    <div
+      class="max-w-[1120px] mx-auto grid gap-6 sm:grid-cols-2 md:grid-cols-5 md:grid-row-2"
+    >
+      <!-- Experience -->
       <section
-        class="w-full h-80 bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-indigo-300 transition"
+        class="w-full bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-3 md:row-span-2"
+      >
+        <!-- Title -->
+        <div class="max-w-[1120px]">
+          <SectionTitle title="Professional experience" />
+          <ExperienceTimeline />
+          <BtnElevator
+            title="Download CV"
+            titleHover="For more details"
+            href="#"
+          >
+            <DownloadIcon class="size-6" />
+          </BtnElevator>
+        </div>
+        <!-- Experience content -->
+      </section>
+
+      <!-- Technologies -->
+      <section
+        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-1"
       >
         <div class="max-w-[1120px]">
-          <h3 class="text-3xl font-bold">Professional experience</h3>
-          <hr
-            class="hover:bg-amber-500 w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded"
-          />
-
-          <BtnElevator title="Download CV" titleHover="And share it" href="#" />
+          <SectionTitle title="Technologies" />
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
         </div>
       </section>
       <section
-        class="w-full max-w-[1120px] h-80 mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-indigo-300 transition"
+        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-1"
       >
         <div class="max-w-[1120px]">
-          <h3 class="text-3xl font-bold">Technologies</h3>
-          <hr class="w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded" />
+          <SectionTitle title="Technologies" />
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <VueIcon class="size-12" />
         </div>
       </section>
     </div>
@@ -73,11 +125,10 @@ import profilePic from "../assets/lele.webp";
     <!-- Projects -->
 
     <section
-      class="w-full max-w-[1120px] mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-7 hover:border-gray-400 transition"
+      class="w-full max-w-[1120px] mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition"
     >
       <div class="max-w-[1120px]">
-        <h3 class="text-3xl font-bold">Selected works</h3>
-        <hr class="w-16 h-1 mt-2 mb-6 bg-amber-400 border-0 rounded" />
+        <SectionTitle title="Selected works" />
       </div>
     </section>
 

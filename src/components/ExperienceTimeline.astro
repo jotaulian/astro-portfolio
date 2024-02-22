@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import logoGuadaltel from "../assets/guadaltel-logo.webp";
+import LogoSnackson from "../icons/Snackson.astro";
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 my-4">
+  <li class="mb-10 ms-8">
+    <span
+      class="absolute flex items-center justify-center size-8 bg-white rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+    >
+      <LogoSnackson class="size-6" />
+    </span>
+    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+      Fullstack developer <a
+        href="https://snackson.com/"
+        class="hover:text-fuchsia-400"
+        target="_blank">@Snackson</a
+      >
+    </h3>
+    <time
+      class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+      >Jul 2022 - Present · 1 yr 8 mos</time
+    >
+    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+      Redesigned and developed a cross-platform application ( <a
+        href="https://web.snackson.com/"
+        class="font-semibold hover:text-fuchsia-400"
+        target="_blank">web</a
+      >, Android , and iOS) for creating and consuming microcourses using Vue 3
+      and FastAPI. Additionally, participated in diverse eLearning projects,
+      overseeing the entire process from design to deployment in production.
+    </p>
+  </li>
+  <li class="ms-8">
+    <span
+      class="absolute flex items-center justify-center size-8 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+    >
+      <Image class="aspect-square" src={logoGuadaltel} alt="Logo guadaltel" />
+    </span>
+    <h3 class="mb-1 text-lg font-semibold dark:text-white">
+      Software Developer <a
+        href="https://www.guadaltel.com/"
+        class="hover:text-fuchsia-400"
+        target="_blank">@Guadaltel</a
+      >
+    </h3>
+    <time
+      class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+      >Mar 2022 - Jul 2022 · 4 mos</time
+    >
+    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+      Collaborated in the development of a <span class="font-semibold"
+        ><a
+          href="https://www.guadaltel.com/guadaltel-desarrolla-plataforma-big-data-sector-agroalimentario-andalucia/"
+          target="_blank">Big Data platform</a
+        ></span
+      > for the Agency of Agrarian and Fisheries Management of Andalusia, automating
+      web scraping with Python (using Selenium and Scrapy), transforming data with
+      Pandas and SQL, and depositing data into PostgreSQL. <br />
+
+      (I started as an intern and upon completion of my internship, I was hired
+      as a full-time employee.)
+    </p>
+  </li>
+</ol>

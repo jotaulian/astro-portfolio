@@ -4,7 +4,8 @@ const { href, title, titleHover } = Astro.props;
 
 <a
   href={href}
-  class={`relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border border-indigo-950 rounded-full group mt-4 text-indigo-950`}
+  target="_blank"
+  class={`relative inline-flex items-center justify-center px-4 py-2 overflow-hidden text-sm font-medium transition duration-300 ease-out border border-indigo-950 rounded-full group mt-4 text-indigo-950 active:scale-95`}
 >
   <span
     class={`absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-y-full bg-indigo-950 rounded-full group-hover:translate-y-0 ease`}
@@ -12,8 +13,8 @@ const { href, title, titleHover } = Astro.props;
     {titleHover}
   </span>
   <span
-    class={`absolute  flex items-center justify-center w-full h-full text-indigo-950 transition-all duration-300 transform group-hover:translate-y-full ease`}
-    >{title}</span
+    class={`absolute  flex items-center gap-x-2 justify-center w-full h-full text-indigo-950 transition-all duration-300 transform group-hover:translate-y-full ease`}
+    ><slot /> {title}</span
   >
-  <span class="relative invisible">{title}</span>
+  <span class="relative invisible flex gap-x-2 pr-2"> <slot /> {title}</span>
 </a>
