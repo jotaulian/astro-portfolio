@@ -1,7 +1,7 @@
 ---
 // Importa la imagen
 import { Image } from "astro:assets";
-import myImage from "../assets/logo-face.webp"; // La imagen es 1600x900
+import myImage from "/public/logo-face.webp"; // La imagen es 1600x900
 import Menu from "../icons/Menu.astro";
 ---
 
@@ -33,11 +33,6 @@ import Menu from "../icons/Menu.astro";
       href="/projects"
       class="hover:bg-indigo-800 hover:text-white rounded-full py-2 px-4 transition duration-500 ease-in-out"
       >Projects</a
-    >
-    <a
-      href="/contact"
-      class="hover:bg-indigo-800 hover:text-white rounded-full py-2 px-4 transition duration-500 ease-in-out"
-      >Contact</a
     >
   </nav>
   <div class="grid place-items-center sm:hidden">

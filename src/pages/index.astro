@@ -4,13 +4,29 @@ import { Image } from "astro:assets";
 import ContactBanner from "../components/ContactBanner.astro";
 import BtnElevator from "../components/BtnElevator.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import ArticleLink from "../components/ArticleLink.astro";
+import ProjectsHome from "../components/ProjectsHome.astro";
 import ExperienceTimeline from "../components/ExperienceTimeline.astro";
-import profilePic from "../assets/lele.webp";
+import profilePic from "/public/lele.webp";
 import GithubIcon from "../icons/Github.astro";
 import DownloadIcon from "../icons/Download.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import SendEmailIcon from "../icons/SendEmail.astro";
 import VueIcon from "../icons/Vue.astro";
+import QuasarIcon from "../icons/Quasar.astro";
+import JavascriptIcon from "../icons/Javascript.astro";
+import NuxtIcon from "../icons/Nuxt.astro";
+import ReactIcon from "../icons/React.astro";
+import PythonIcon from "../icons/Python.astro";
+import NextIcon from "../icons/Next.astro";
+import TypescriptIcon from "../icons/Typescript.astro";
+import NodeIcon from "../icons/Node.astro";
+import AngularIcon from "../icons/Angular.astro";
+import MysqlIcon from "../icons/Mysql.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import BootstrapIcon from "../icons/Bootstrap.astro";
+import PostgreSQLIcon from "../icons/PostgreSQL.astro";
+import ArrowNarrowRight from "../icons/ArrowNarrowRight.astro";
 ---
 
 <Layout title="Julian's portfolio">
@@ -19,7 +35,9 @@ import VueIcon from "../icons/Vue.astro";
     <section
       class="max-w-[1120px] mx-auto rounded-[24px] p-4 sm:p-12 bg-white border border-gray-300 shadow sm:grid sm:gap-4 sm:grid-cols-3"
     >
+      <!-- Text and btns -->
       <div class="mb-8 sm:col-span-2">
+        <!-- Text -->
         <h1 class="font-bold text-6xl sm:text-7xl px-0 pb-4 relative">
           I'm Julian Eggle.
         </h1>
@@ -28,6 +46,7 @@ import VueIcon from "../icons/Vue.astro";
           loves cracking problems and creating innovative solutions with
           Javascript.
         </h2>
+        <!-- Btn's -->
         <div class="flex flex-wrap gap-x-4">
           <BtnElevator
             title="LinkedIn"
@@ -56,7 +75,8 @@ import VueIcon from "../icons/Vue.astro";
           </BtnElevator>
         </div>
       </div>
-      <div class="w-full aspect-square rounded-[24px] overflow-hidden">
+      <!-- Profile picture -->
+      <div class="w-full aspect-square rounded-[20px] overflow-hidden">
         <Image
           class="w-full aspect-square hover:scale-110 transition duration-500"
           src={profilePic}
@@ -73,41 +93,83 @@ import VueIcon from "../icons/Vue.astro";
         class="w-full bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-3 md:row-span-3"
       >
         <!-- Title -->
-        <div class="max-w-[1120px]">
-          <SectionTitle title="Professional experience" />
-          <ExperienceTimeline />
-          <BtnElevator
-            title="Download CV"
-            titleHover="For more details"
-            href="#"
-          >
-            <DownloadIcon class="size-6" />
-          </BtnElevator>
-        </div>
-        <!-- Experience content -->
+        <SectionTitle title="Professional experience" />
+        <!-- Timeline -->
+        <ExperienceTimeline />
+        <!-- BTN -->
+        <BtnElevator
+          title="Download CV"
+          titleHover="For more details"
+          href="/cv-eggle-EN.pdf"
+        >
+          <DownloadIcon class="size-6" />
+        </BtnElevator>
       </section>
 
-      <!-- Technologies -->
+      <!-- Latest articles -->
       <section
-        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-1"
+        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-2 flex flex-col justify-between"
       >
-        <div class="max-w-[1120px]">
-          <SectionTitle title="Technologies" />
+        <div>
+          <SectionTitle title="Latest articles" />
+          <ArticleLink
+            path="/articles"
+            title="Vue 3: watch vs watchEffect"
+            date="Feb 23, 2024"
+          >
+            <VueIcon
+              class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+            />
+          </ArticleLink>
+          <ArticleLink
+            path="/articles"
+            title="Best JS library for dates and times"
+            date="Feb 10, 2024"
+          >
+            <JavascriptIcon
+              class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+            />
+          </ArticleLink>
+          <ArticleLink
+            path="/articles"
+            title="Best JS library for dates and times"
+            date="Feb 10, 2024"
+          >
+            <JavascriptIcon
+              class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+            />
+          </ArticleLink>
         </div>
-        <div class="flex flex-wrap gap-8">
-          <VueIcon class="size-24" />
-          <VueIcon class="size-24" />
+
+        <div>
+          <a
+            href="#"
+            class="group inline-flex gap-x-1 font-bold hover:text-fuchsia-600"
+            >Show more articles <ArrowNarrowRight
+              class="size-6 group-hover:translate-x-1 transition duration-500"
+            /></a
+          >
         </div>
       </section>
-      <!-- Another -->
+
+      <!-- Tech -->
       <section
-        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-2"
+        class="w-full mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-2 md:row-span-1 overflow-hidden"
       >
-        <div class="max-w-[1120px]">
-          <SectionTitle title="More about me" />
-        </div>
+        <SectionTitle title="Technologies" />
         <div class="flex flex-wrap gap-4">
-          <div class="text-5xl">asdasdasd</div>
+          <JavascriptIcon class="size-12" />
+          <TypescriptIcon class="size-12" />
+          <VueIcon class="size-12" />
+          <QuasarIcon class="size-12" />
+          <NuxtIcon class="size-12" />
+          <AngularIcon class="size-12" />
+          <NodeIcon class="size-12" />
+          <PostgreSQLIcon class="size-12" />
+          <MysqlIcon class="size-12" />
+          <TailwindIcon class="size-12" />
+          <BootstrapIcon class="size-12" />
+          <!-- <PythonIcon class="size-12" /> -->
         </div>
       </section>
     </div>
@@ -117,7 +179,9 @@ import VueIcon from "../icons/Vue.astro";
       class="w-full max-w-[1120px] mx-auto bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition"
     >
       <div class="max-w-[1120px]">
-        <SectionTitle title="Selected works" />
+        <SectionTitle title="Highlighted projects" />
+
+        <ProjectsHome />
       </div>
     </section>
 

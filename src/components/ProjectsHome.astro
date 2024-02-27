@@ -1,0 +1,59 @@
+---
+import Badge from "../components/Badge.astro";
+import ReactIcon from "../icons/React.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+
+const TAGS = {
+  REACT:{
+    name: 'React',
+    icon: ReactIcon
+  },
+  TAILWIND:{
+    name: 'Tailwind',
+    icon: TailwindIcon
+  },
+}
+const PROJECTS = [
+  {
+    title: "Titulo del proyecto",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod est, expedita aliquam alias minima tempore quia in. Eos placeat aliquid harum unde alias excepturi enim officia quod voluptatibus quos!",
+    link: "#",
+    imgUrl:
+      "https://cdn.dribbble.com/userupload/10168373/file/original-e0c1b4df3a45e33733e7b9c5535d58bc.png?resize=752x",
+    github: "#",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  
+];
+
+---
+
+<div class="mt-8 space-y-16">
+  {PROJECTS.map(({imgUrl,title,desc,tags,link,github})=>(
+    <div class="grid grid-cols-1 gap-4 sm:gap-x-8 sm:grid-cols-5">
+      <!-- Imagen -->
+      <div class="sm:col-span-2">
+        <img
+          class="rounded-[20px] aspect-[16/10] object-cover"
+          src={imgUrl}
+          alt="Project screenshot"
+        />
+      </div>
+      <!-- Descripción -->
+      <div class="sm:col-span-3 space-y-2">
+        <div class="text-2xl font-bold">{title}</div>
+        <div class="flex flex-row gap-x-2">
+          {
+            tags.map((tag) =>(
+              <Badge><tag.icon class="size-4"></tag.icon> {tag.name}</Badge>
+            ))
+          }
+        </div>
+        <div class="text-base text-pretty">
+          {desc}
+          
+        </div>
+      </div>
+    </div>
+  ))}
+</div>

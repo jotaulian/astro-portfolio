@@ -1,0 +1,22 @@
+---
+const { path, title, date } = Astro.props;
+---
+
+<a
+  href={path}
+  class="group flex flex-row gap-4 hover:bg-indigo-50 rounded-lg px-2 py-2 my-2"
+>
+  <!-- IMG -->
+  <slot />
+  <!-- Title and date -->
+  <div>
+    <div class="text-lg font-bold mb-2 leading-tight">
+      {title}
+    </div>
+    <time
+      class="block text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+    >
+      {date}</time
+    >
+  </div>
+</a>

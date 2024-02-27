@@ -8,6 +8,7 @@ export default {
 				blobdown: "blobdown 7s infinite", 
 				blobup: "blobup 10s infinite", 
 				blobleftdown: "blobleftdown 5s infinite", 
+
 			},
 			keyframes:{
 				blobdown:{
@@ -21,7 +22,7 @@ export default {
 						transform: "translate(-20px,300px) scale(1.2)"
 					},
 					"100%":{
-						transform: " translate(0px,0px)scale(1)"
+						transform: " translate(0px,0px) scale(1)"
 					},
 				},
 				blobup:{
@@ -35,7 +36,7 @@ export default {
 						transform: "translate(-100px,-250px) scale(1.2)"
 					},
 					"100%":{
-						transform: " translate(0px,0px)scale(1)"
+						transform: " translate(0px,0px) scale(1)"
 					},
 				},
 				blobleftdown:{
@@ -49,9 +50,9 @@ export default {
 						transform: "translate(-20px,-50px) scale(1.3)"
 					},
 					"100%":{
-						transform: " translate(0px,0px)scale(1)"
+						transform: " translate(0px,0px) scale(1)"
 					},
-				},
+				}
 			}
 		},
 	},
