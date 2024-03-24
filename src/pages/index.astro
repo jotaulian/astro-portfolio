@@ -33,11 +33,10 @@ import ArrowNarrowRight from "../icons/ArrowNarrowRight.astro";
   <main class="space-y-3 md:space-y-6">
     <!-- Main header -->
     <section
-      class="max-w-[1120px] mx-auto rounded-[24px] p-4 sm:p-12 bg-white border border-gray-300 shadow sm:grid sm:gap-4 sm:grid-cols-3"
+      class="max-w-[1120px] mx-auto rounded-[24px] p-6 sm:p-12 bg-white border border-gray-300 shadow sm:grid sm:gap-4 sm:grid-cols-3"
     >
       <!-- Text and btns -->
       <div class="mb-8 sm:col-span-2">
-        <!-- Text -->
         <h1 class="font-bold text-6xl sm:text-7xl px-0 pb-4 relative">
           I'm Julian Eggle.
         </h1>
@@ -90,7 +89,7 @@ import ArrowNarrowRight from "../icons/ArrowNarrowRight.astro";
     >
       <!-- Experience -->
       <section
-        class="w-full bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-3 md:row-span-3"
+        class="w-full bg-white rounded-[24px] border border-gray-300 shadow p-6 hover:border-indigo-300 transition md:col-span-3 md:row-span-3 overflow-hidden"
       >
         <!-- Title -->
         <SectionTitle title="Professional experience" />
@@ -113,37 +112,40 @@ import ArrowNarrowRight from "../icons/ArrowNarrowRight.astro";
         <div>
           <SectionTitle title="Latest articles" />
           <ArticleLink
-            path="/articles"
+            path="/articles/watch-vs-watcheffect"
             title="Vue 3: watch vs watchEffect"
             date="Feb 23, 2024"
           >
             <VueIcon
               class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+              transition:name="img-article-watch-vs-watcheffect"
             />
           </ArticleLink>
           <ArticleLink
-            path="/articles"
-            title="Best JS library for dates and times"
-            date="Feb 10, 2024"
+            path="/articles/2024/websites-layouts-for-begginers"
+            title="Websites Layouts for Beginners"
+            date="Mar 04, 2024"
           >
             <JavascriptIcon
               class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+              transition:name="img-article-2"
             />
           </ArticleLink>
           <ArticleLink
-            path="/articles"
-            title="Best JS library for dates and times"
+            path="/articles/create-vcard-python"
+            title="Create a QR with your contact details using Python"
             date="Feb 10, 2024"
           >
-            <JavascriptIcon
+            <PythonIcon
               class="size-10 group-hover:scale-110 ease-in-out duration-300 transition flex-none self-center"
+              transition:name="img-article-create-vcard-python"
             />
           </ArticleLink>
         </div>
 
         <div>
           <a
-            href="#"
+            href="/articles"
             class="group inline-flex gap-x-1 font-bold hover:text-fuchsia-600"
             >Show more articles <ArrowNarrowRight
               class="size-6 group-hover:translate-x-1 transition duration-500"

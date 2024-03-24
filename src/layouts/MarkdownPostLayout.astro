@@ -1,0 +1,15 @@
+---
+import BaseLayout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+import NuxtIcon from "../icons/Nuxt.astro";
+---
+
+<BaseLayout title={frontmatter.title}>
+  <section
+    class="max-w-[1120px] mx-auto rounded-[24px] p-6 sm:p-12 bg-white border border-gray-300 shadow"
+  >
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <slot />
+  </section>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import VueIcon from "../../icons/Vue.astro";
+---
+
+<Layout title="Read my thoughts">
+  <main class="space-y-3 md:space-y-6">
+    <section
+      class="max-w-[1120px] mx-auto rounded-[24px] p-6 sm:p-12 bg-white border border-gray-300 shadow space-y-8"
+    >
+      <div class="flex flex-row gap-4">
+        <VueIcon
+          class="size-20"
+          transition:name="img-article-watch-vs-watcheffect"
+        />
+        <h1 class="text-4xl font-bold">Vue 3: watch vs watchEffect</h1>
+      </div>
+    </section>
+  </main>
+</Layout>

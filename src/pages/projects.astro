@@ -10,16 +10,8 @@ const allPosts = await Astro.glob("../pages/articles/*.astro");
       class="max-w-[1120px] mx-auto rounded-[24px] p-6 sm:p-12 bg-white border border-gray-300 shadow"
     >
       <div class="flex flex-row gap-4 mb-4">
-        <h1 class="text-4xl font-bold">A list with all my articles</h1>
+        <h1 class="text-4xl font-bold">Old projects</h1>
       </div>
-      <!-- Listado -->
-      <ul>
-        {
-          allPosts.map((post) => (
-            <li class="text-lg font-semibold">{post.url}</li>
-          ))
-        }
-      </ul>
     </section>
   </main>
 </Layout>

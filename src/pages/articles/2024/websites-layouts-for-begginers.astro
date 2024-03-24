@@ -1,0 +1,38 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import JavascriptIcon from "../../../icons/Javascript.astro";
+
+console.log(Astro.props);
+---
+
+<Layout title="Read my thoughts">
+  <main class="space-y-3 md:space-y-6">
+    <section
+      class="max-w-[1120px] mx-auto rounded-[24px] p-6 sm:p-12 bg-white border border-gray-300 shadow space-y-6"
+    >
+      <div class="flex flex-row gap-4">
+        <JavascriptIcon class="size-16" transition:name="img-article-2" />
+        <h1 class="text-4xl font-bold">Websites Layouts for Beginners</h1>
+      </div>
+      <!-- Intro -->
+      <div>
+        <p class="mb-2">
+          When I first tackled website design, I was overwhelmed by the blank
+          canvas before me. Without a clear starting point, every element I
+          added seemed out of place. It wasn't until I broke down layouts into
+          basic principles that I found clarity. In this article, I'll share
+          these principles, empowering beginners to create layouts with
+          confidence.
+        </p>
+        <p>
+          Let's map out the journey ahead! Here's the outline for our article:
+        </p>
+        <ol class="list-inside list-decimal font-bold">
+          <li>Basic Principles</li>
+          <li>Designing Out Sections</li>
+          <li>Laying Out Pages</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+</Layout>
